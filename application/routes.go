@@ -56,8 +56,10 @@ func (a *App) loadOrderRoutes(router chi.Router) {
 
 	router.Get("/", orderHandler.ListOrders)
 
-	// Example: Only "admin" and "manager" can create or delete orders
 	router.With(middleware.Authenticate([]byte(a.Config.JWTSecret))).Post("/", orderHandler.CreateOrder)
+	router.With(middleware.Authenticate([]byte(a.Config.JWTSecret))).Put("/", orderHandler.UpdateOrder)
+	router.With(middleware.Authenticate([]byte(a.Config.JWTSecret))).Put("/{id}/cancel", orderHandler.CancelOrder)
+	router.With(middleware.Authenticate([]byte(a.Config.JWTSecret))).Get("/my", orderHandler.GetUserOrders)
 	router.With(middleware.RequireRole("admin")).Delete("/{id}", orderHandler.DeleteOrder)
 }
 
