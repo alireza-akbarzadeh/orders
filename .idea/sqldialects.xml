@@ -8,6 +8,7 @@
     <file url="file://$PROJECT_DIR$/migrations/20260429115801_add_product_table.sql" dialect="GenericSQL" />
     <file url="file://$PROJECT_DIR$/repository/auth/auth_repo.go" dialect="GenericSQL" />
     <file url="file://$PROJECT_DIR$/repository/orders/orders_repo.go" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/repository/products/products.go" dialect="GenericSQL" />
     <file url="file://$PROJECT_DIR$/repository/users/users_repo.go" dialect="GenericSQL" />
   </component>
 </project>
