@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="SqlDialectMappings">
+    <file url="file://$PROJECT_DIR$/application/app.go" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/migrations/001_create_users_table.sql" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/migrations/20260429081459_orders_table.sql" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/repository/auth/auth_repo.go" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/repository/orders/orders_repo.go" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/repository/users/users_repo.go" dialect="GenericSQL" />
+  </component>
+</project>

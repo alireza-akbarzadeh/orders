@@ -1,0 +1,54 @@
+{
+  "go.useLanguageServer": true,
+  "go.toolsManagement.autoUpdate": true,
+
+  "go.toolsEnvVars": {
+    "GO111MODULE": "on",
+    "GOPROXY": "https://goproxy.cn,direct"
+  },
+
+  "go.formatTool": "gofumpt",
+  "go.formatFlags": [],
+
+  "go.lintTool": "golangci-lint",
+  "go.lintFlags": ["--fast"],
+
+  "gopls": {
+    "usePlaceholders": true,
+    "completeUnimported": true,
+    "staticcheck": true,
+    "ui.semanticTokens": true,
+
+    "analyses": {
+      "shadow": true,
+      "unusedparams": true,
+      "nilness": true,
+      "unusedwrite": true,
+      "useany": true
+    }
+  },
+
+  "[go]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "golang.go",
+
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": "explicit",
+      "source.fixAll": "explicit"
+    },
+
+    "editor.snippetSuggestions": "none"
+  },
+
+  "go.delveConfig": {
+    "apiVersion": 2,
+    "showGlobalVariables": true,
+    "dlvLoadConfig": {
+      "followPointers": true,
+      "maxVariableRecurse": 3,
+      "maxStringLen": 1000,
+      "maxArrayValues": 1000,
+      "maxStructFields": -1
+    }
+  }
+}
